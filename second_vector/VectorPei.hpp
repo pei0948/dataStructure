@@ -1,8 +1,16 @@
+#ifndef VECTOR_PEI
+#define VECTOR_PEI
+
+#include <iostream>
+
 typedef int Rank;
 #define DEFAULT_CAPACITY 3
 
 ///////rand()///////////////////
 #include <stdlib.h>
+
+/////////////////////NULL////////////
+#include <cstddef>
 
 ///////swap()/////////////////////
 #include <algorithm>
@@ -144,7 +152,7 @@ void VectorPei<T>::expand()
 	if(_capacity<DEFAULT_CAPACITY)
 		_capacity=DEFAULT_CAPACITY;
 	T *oldElem=_elem;
-	_elem=new T[_capacity<<1];
+	_elem=new T[_capacity<<=1];
 	for(int i=0; i<_size; i++)
 	{
 		_elem[i]=oldElem[i];
@@ -562,4 +570,7 @@ void VectorPei<T>::sort(Rank lo, Rank hi)
 												quickSort(_elem, lo, hi);//nlogn
 												break;
 				}
+
 }
+
+#endif
