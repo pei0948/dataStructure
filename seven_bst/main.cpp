@@ -2,6 +2,7 @@
 using namespace std;
 
 #include "AVL.hpp"
+#include "Splay.hpp"
 #include <cstddef>
 
 template <typename T>
@@ -16,7 +17,7 @@ class Visit
 
 int main(int argc, char **argv)
 {
-				AVL<int> *btp=new AVL<int>();
+				Splay<int> *btp=new Splay<int>();
 				BinNodePeiPosi(int) root=btp->insertAsRoot(36);
 				BinNodePeiPosi(int) rootLc=btp->insertAsLc(root, 27);
 				BinNodePeiPosi(int) rootRc=btp->insertAsRc(root, 58);
@@ -26,8 +27,8 @@ int main(int argc, char **argv)
 				BinNodePeiPosi(int) rootRLc=btp->insertAsLc(rootRc, 53);
 				btp->insertAsLc(rootRLc, 46);
 
-				bool sign=btp->remove(69);
+				btp->insert(37);
 
-				cout<<sign<<endl;
+				cout<<btp->root()->data<<endl;
 				return 0;
 }

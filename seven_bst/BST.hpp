@@ -1,3 +1,6 @@
+#ifndef BST_TREE
+#define BST_TREE
+
 template <typename K, typename V>
 struct EntryP
 {
@@ -179,3 +182,5 @@ BinNodePeiPosi(T) BST<T>::rotateAt(BinNodePeiPosi(T) &x)
 								}
 				}
 }
+
+#endif

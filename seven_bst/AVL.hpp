@@ -1,3 +1,6 @@
+#ifndef AVL_BST
+#define AVL_BST
+
 #include "BST.hpp"
 
 #define balance(x) (stature(x->lc)==stature(x->rc))
@@ -52,3 +55,5 @@ bool AVL<T>::remove(T const &e)
 				}
 				return true;
 }
+
+#endif
