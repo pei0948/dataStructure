@@ -382,6 +382,7 @@ static Rank fibSearch(T *_elem, T	e, int lo, int hi)
 				fib=new int[3];
 				while(lo<hi)
 				{
+				//				cout<<lo<<" "<<hi<<endl;
 								getFib(hi-lo, fib);
 								int mi=lo+fib[1];
 								if(e<_elem[mi])
@@ -397,7 +398,8 @@ static Rank fibSearch(T *_elem, T	e, int lo, int hi)
 												return mi;
 								}
 				}
-				return -1;
+				lo--;
+				return lo;
 }
 
 template <typename T>
