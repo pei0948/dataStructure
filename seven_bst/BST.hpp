@@ -147,7 +147,7 @@ BinNodePeiPosi(T) BST<T>::connect34(BinNodePeiPosi(T) a, BinNodePeiPosi(T) b, Bi
 				this->updateHeight(c);
 
 				b->lc=a;
-				b->rc=a;
+				b->rc=c;
 				this->updateHeight(b);
 
 				return b;
