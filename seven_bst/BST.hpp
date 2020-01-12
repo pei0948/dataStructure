@@ -1,34 +1,5 @@
 #ifndef BST_TREE
 #define BST_TREE
-
-template <typename K, typename V>
-struct EntryP
-{
-				K key;
-				V value;
-				EntryP(K k, V v):key(k), value(v)
-				{}
-				EntryP(EntryP<K, V> const &e):key(e.key), value(e.value)
-				{}
-
-				bool operator== (EntryP<K, V> const &e)
-				{
-								return (key==e.key);
-				}
-				bool operator< (EntryP<K, V> const &e)
-				{
-								return (key<e.key);
-				}
-				bool operator> (EntryP<K, V> const &e)
-				{
-								return (key>e.key);
-				}
-				bool operator!= (EntryP<K, V> const &e)
-				{
-								return (key!=e.key);
-				}
-};
-
 #include <cstddef>
 
 #include "../five_tree/BinTreePei.hpp"
